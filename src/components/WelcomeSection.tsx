@@ -6,8 +6,7 @@ export function WelcomeSection() {
       <Container
         maxWidth={"xl"}
         sx={{
-          background:
-            "url(/img/boxes.png), radial-gradient(circle at 100% 0%, rgba(139, 123, 207, 1) 0%, rgba(0, 0, 0, 1) 22%, rgba(0, 0, 0, 1) 49%, rgba(0, 0, 0, 1) 92%, rgba(239, 147, 100, 1) 100%)",
+          background: "url(/img/background.png)",
           backgroundRepeat: "no-repeat, no-repeat",
           backgroundPosition: "center, center",
           backgroundSize: "cover, cover",

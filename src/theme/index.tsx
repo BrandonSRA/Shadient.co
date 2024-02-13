@@ -8,6 +8,9 @@ export const GenerateTheme = createTheme({
     secondary: {
       main: "#fff",
     },
+    background: {
+      default: "#000",
+    },
   },
 
   typography: {
@@ -19,7 +22,7 @@ export const GenerateTheme = createTheme({
       sm: 600,
       md: 900,
       lg: 1200,
-      xl: 1600,
+      xl: 2479,
     },
   },
 
