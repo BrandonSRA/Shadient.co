@@ -1,4 +1,11 @@
-import { Container, DialogTitle, Stack, Typography } from "@mui/material";
+import {
+  Button,
+  Container,
+  DialogTitle,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
 
 export function WelcomeSection() {
   return (
@@ -10,6 +17,7 @@ export function WelcomeSection() {
           backgroundRepeat: "no-repeat, no-repeat",
           backgroundPosition: "center, center",
           backgroundSize: "cover, cover",
+          height: "100vh",
         }}
       >
         <Stack
@@ -50,6 +58,43 @@ export function WelcomeSection() {
             <br />
             porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros{" "}
           </Typography>
+          <Stack direction="row" spacing={2} sx={{ mt: "2rem" }}>
+            <TextField
+              type="email"
+              placeholder="Email"
+              sx={{
+                width: "100%",
+                borderRadius: "100px",
+                border: "1px solid #ffff",
+                backgroundColor: "#0F0F0F",
+                mt: "1rem",
+                [`& fieldset`]: {
+                  borderRadius: "100px",
+                  border: "none",
+                },
+              }}
+              InputProps={{
+                style: {
+                  color: "#ffff",
+                },
+              }}
+            ></TextField>
+            <Button
+              variant="contained"
+              sx={{
+                color: "#000",
+                width: "50%",
+                backgroundColor: "#FFA800",
+                borderRadius: "100px",
+                p: "0px 24px",
+                ":hover": {
+                  backgroundColor: "#FFA800",
+                },
+              }}
+            >
+              Attract
+            </Button>
+          </Stack>
         </Stack>
       </Container>
     </>

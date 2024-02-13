@@ -22,7 +22,7 @@ export const GenerateTheme = createTheme({
       sm: 600,
       md: 900,
       lg: 1200,
-      xl: 2479,
+      xl: 2609,
     },
   },
 
