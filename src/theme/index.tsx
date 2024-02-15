@@ -8,9 +8,6 @@ export const GenerateTheme = createTheme({
     secondary: {
       main: "#fff",
     },
-    background: {
-      default: "#000",
-    },
   },
 
   typography: {
@@ -27,6 +24,19 @@ export const GenerateTheme = createTheme({
   },
 
   components: {
+    MuiContainer: {
+      defaultProps: {
+        maxWidth: false,
+      },
+      styleOverrides: {
+        root: {
+          padding: 0,
+          margin: 0,
+          width: "100%",
+          height: "100%",
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -39,6 +49,15 @@ export const GenerateTheme = createTheme({
         root: {
           backdropFilter: "blur(10px)",
           backgroundColor: "rgba(15, 15, 15, 0.4)",
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        input: {
+          "&.MuiInputBase-input": {
+            padding: "5px 24px",
+          },
         },
       },
     },

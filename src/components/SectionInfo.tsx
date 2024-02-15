@@ -3,9 +3,9 @@ import { Container, Stack, Typography } from "@mui/material";
 export function SectionInfo() {
   return (
     <>
-      <Container maxWidth={"xl"} sx={{ backgroundColor: "#000" }}>
+      <Container maxWidth={false} sx={{ backgroundColor: "#000", width:"100%" }}>
         <Stack
-          direction="row"
+          direction={{ xs: "column", lg: "row"  }}
           textAlign="start"
           sx={{ color: "#ffff", p: "5rem ", gap: "4rem" }}
         >

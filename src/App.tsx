@@ -1,11 +1,11 @@
 import { Navbar } from "./components/NavBar";
-import { LandingPage } from "./pages/LandingPages";
+import BrowserRouter from "./router";
 
 function App() {
   return (
     <>
       <Navbar />
-      <LandingPage />
+      <BrowserRouter />
     </>
   );
 }

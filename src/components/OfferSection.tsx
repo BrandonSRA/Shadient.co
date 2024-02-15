@@ -15,30 +15,56 @@ export function OfferSection() {
   };
 
   const MyCard: React.FC<CardProps> = ({ icon, title, text }) => (
-    <Card
+    <Stack
       sx={{
-        maxWidth: 345,
-        m: 1,
-        border: "solid #fff",
-        background: "#110F0F",
-        color: "#fff",
+        perspective: "1000px",
+        transition: "transform 0.4s",
+        "& > div, & > div > div": {
+          transition: "inherit",
+        },
+        "&:hover": {
+          "& > div": {
+            transform: "rotateY(30deg)",
+            "& > div:nth-of-type(2)": {
+              transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+            },
+            "& > div:nth-of-type(3)": {
+              transform: "translate3d(45px, 50px, 40px)",
+            },
+          },
+        },
       }}
+      direction={{ xs: "column", lg: "row" }}
+      alignContent={{ xs: "center", lg: "flex-start" }}
+      textAlign="start"
+      justifyContent="center"
+      m={1}
     >
-      <IconButton>{icon}</IconButton>
-      <CardContent sx={{ pt: "0px" }}>
-        <Typography fontSize="30px" sx={{ color: "#fff", pb: "10px" }}>
-          {title}
-        </Typography>
-        <Typography fontSize="15px" sx={{ color: "#5e5e5e" }}>
-          {text.split("\n").map((line, index) => (
-            <span key={index}>
-              {line}
-              <br />
-            </span>
-          ))}
-        </Typography>
-      </CardContent>
-    </Card>
+      <Card
+        sx={{
+          maxWidth: 345,
+          m: 1,
+          border: "solid #fff",
+          background: "#110F0F",
+          color: "#fff",
+        }}
+      >
+        <IconButton>{icon}</IconButton>
+        <CardContent sx={{ pt: "0px" }}>
+          <Typography fontSize="30px" sx={{ color: "#fff", pb: "10px" }}>
+            {title}
+          </Typography>
+          <Typography fontSize="15px" sx={{ color: "#5e5e5e" }}>
+            {text.split("\n").map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+              </span>
+            ))}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Stack>
   );
 
   const cards = [
@@ -76,7 +102,7 @@ export function OfferSection() {
 
   return (
     <>
-      <Container maxWidth={"xl"} sx={{ backgroundColor: "#110F0F" }}>
+      <Container sx={{ backgroundColor: "#110F0F" }}>
         <Stack
           direction="column"
           textAlign="center"
@@ -90,11 +116,11 @@ export function OfferSection() {
             magna semper orci a <br /> tincidunt.{" "}
           </Typography>
           <Stack
-            direction="row"
+            direction={{ xs: "column", lg: "row" }}
+            alignContent={{ xs: "center", lg: "flex-start" }}
             textAlign="start"
             justifyContent="center"
             flexWrap="wrap"
-            m={1}
           >
             {cards.map((card, index) => (
               <MyCard

@@ -6,26 +6,29 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export function WelcomeSection() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <>
       <Container
-        maxWidth={"xl"}
         sx={{
           background: "url(/img/background.png)",
           backgroundRepeat: "no-repeat, no-repeat",
-          backgroundPosition: "center, center",
-          backgroundSize: "cover, cover",
-          height: "100vh",
+          backgroundPosition: isMobile ? "right" : "center, center",
+          backgroundSize: isMobile ? "auto" : "cover, cover",
         }}
       >
         <Stack
           direction="column"
           flexWrap="wrap"
-          alignItems="center"
+          alignItems={{ sm: "center", xs: "center", xl: "center" }}
           textAlign="left"
-          sx={{ p: "10rem" }}
+          padding={{ xs: "3rem", md: "5rem" }}
         >
           <DialogTitle
             sx={{
