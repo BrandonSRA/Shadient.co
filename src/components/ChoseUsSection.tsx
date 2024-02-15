@@ -3,23 +3,16 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material";
 export function ChoseUsSection() {
   return (
     <>
-      <Container  sx={{ backgroundColor: "#000" }}>
+      <Container sx={{ backgroundColor: "#000" }}>
         <Stack
-          direction={{ xs: 'column', lg: 'row' }}
+          direction={{ xs: "column", lg: "row" }}
           textAlign="start"
           justifyContent="center"
           alignItems="center"
-          sx={{ color: "#ffff", p: "5rem ", gap: "4rem" }}
+          padding={{ xs: "2rem", lg: "4rem" }}
+          sx={{ color: "#ffff", gap: "4rem" }}
         >
-          <Box
-            display="flex"
-            alignSelf="center"
-            sx={(t) => ({
-              [t.breakpoints.down("md")]: {
-                aspectRatio: 16 / 9,
-              },
-            })}
-          >
+          <Box display="flex" alignSelf="center">
             {" "}
             <img
               src="/img/PersonIcon.svg"
@@ -29,7 +22,11 @@ export function ChoseUsSection() {
               }}
             />
           </Box>
-          <Stack direction="column" justifyContent="center" sx={{ gap: "1rem", maxWidth: "400px" }}>
+          <Stack
+            direction="column"
+            justifyContent="center"
+            sx={{ gap: "1rem", maxWidth: "400px" }}
+          >
             <Typography
               variant="h4"
               sx={{ fontWeight: "700", fontSize: "1.5rem" }}
