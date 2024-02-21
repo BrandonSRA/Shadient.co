@@ -112,7 +112,7 @@ export function OurWorkSection() {
           direction={{ xs: "column", lg: "row" }}
           textAlign={{ xs: "center", lg: "start" }}
           alignItems={{ xs: "center", lg: "flex-start" }}
-          sx={{ color: "#ffff", pt: "5rem ", gap: "2rem" }}
+          sx={{ color: "#ffff", p: "5rem ", gap: "2rem" }}
         >
           <Stack sx={{ gap: "1rem", maxWidth: "400px" }}>
             <Typography sx={{ fontSize: "30px" }}>
