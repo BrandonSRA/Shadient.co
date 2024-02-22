@@ -2,6 +2,9 @@ import { WelcomeSection } from "../components/WelcomeSection";
 import { SectionInfo } from "../components/SectionInfo";
 import { OfferSection } from "../components/OfferSection";
 import { ChoseUsSection } from "../components/ChoseUsSection";
+import { OurWorkSection } from "../components/OurWorkSection";
+import { CustomersSection } from "../components/CustomersSection";
+import { DiscussSection } from "../components/DiscussSection";
 
 export function LandingPage() {
   return (
@@ -10,6 +13,9 @@ export function LandingPage() {
       <SectionInfo />
       <OfferSection />
       <ChoseUsSection />
+      <OurWorkSection />
+      <CustomersSection />
+      <DiscussSection />
     </>
   );
 }

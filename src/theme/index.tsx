@@ -19,7 +19,7 @@ export const GenerateTheme = createTheme({
       sm: 600,
       md: 900,
       lg: 1200,
-      xl: 2609,
+      xl: 1700,
     },
   },
 
@@ -58,6 +58,14 @@ export const GenerateTheme = createTheme({
           "&.MuiInputBase-input": {
             padding: "5px 24px",
           },
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+         textDecoration: "none",
+         cursor: "pointer",
         },
       },
     },
