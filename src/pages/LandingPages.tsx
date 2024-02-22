@@ -4,6 +4,7 @@ import { OfferSection } from "../components/OfferSection";
 import { ChoseUsSection } from "../components/ChoseUsSection";
 import { OurWorkSection } from "../components/OurWorkSection";
 import { CustomersSection } from "../components/CustomersSection";
+import { DiscussSection } from "../components/DiscussSection";
 
 export function LandingPage() {
   return (
@@ -14,6 +15,7 @@ export function LandingPage() {
       <ChoseUsSection />
       <OurWorkSection />
       <CustomersSection />
+      <DiscussSection />
     </>
   );
 }
