@@ -9,9 +9,32 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { Link as RouterLink } from "react-router-dom";
 import * as React from "react";
 
-const pages = ["Company", "Services", "Resources"];
+const pages = [
+  {
+    name: "Home",
+    component: (
+      <Link color="#fff" component={RouterLink} to="/landing">
+        Home
+      </Link>
+    ),
+  },
+  {
+    name: "About",
+    component: (
+      <Link component={RouterLink} to="/company">
+        Company
+      </Link>
+    ),
+  },
+  {
+    name: "Contact",
+    component: <Link>Services</Link>,
+  },
+  // Agrega más rutas aquí
+];
 
 export const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -30,13 +53,17 @@ export const Navbar = () => {
     <AppBar position="fixed">
       <Container sx={{ width: "100%" }}>
         <Toolbar disableGutters>
-          <Link sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
+          <Link
+            component={RouterLink}
+            to="/"
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          >
             <img src="/img/Frame.svg" />
           </Link>
           <Typography
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            component={RouterLink}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -79,20 +106,24 @@ export const Navbar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  {page.component}
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Link sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
+          <Link
+            component={RouterLink}
+            to="/"
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+          >
             <img src="/img/Frame.svg" />
           </Link>
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            component={RouterLink}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -112,11 +143,11 @@ export const Navbar = () => {
           >
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                {page.component}
               </Button>
             ))}
           </Box>
