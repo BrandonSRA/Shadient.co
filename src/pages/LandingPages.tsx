@@ -5,10 +5,13 @@ import { ChoseUsSection } from "../components/ChoseUsSection";
 import { OurWorkSection } from "../components/OurWorkSection";
 import { CustomersSection } from "../components/CustomersSection";
 import { DiscussSection } from "../components/DiscussSection";
+import { Navbar } from "../components/NavBar";
+import { Footer } from "../components/Footer";
 
 export function LandingPage() {
   return (
     <>
+      <Navbar />
       <WelcomeSection />
       <SectionInfo />
       <OfferSection />
@@ -16,6 +19,7 @@ export function LandingPage() {
       <OurWorkSection />
       <CustomersSection />
       <DiscussSection />
+      <Footer />
     </>
   );
 }

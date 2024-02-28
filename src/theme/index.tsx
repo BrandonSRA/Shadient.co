@@ -64,8 +64,16 @@ export const GenerateTheme = createTheme({
     MuiLink: {
       styleOverrides: {
         root: {
-         textDecoration: "none",
-         cursor: "pointer",
+          textDecoration: "none",
+          cursor: "pointer",
+        },
+      },
+    },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          paddingTop: "0px",
+          paddingBottom: "0px",
         },
       },
     },
