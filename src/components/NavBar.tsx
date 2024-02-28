@@ -31,7 +31,11 @@ const pages = [
   },
   {
     name: "Contact",
-    component: <Link>Services</Link>,
+    component: (
+      <Link component={RouterLink} to="/services">
+        Services
+      </Link>
+    ),
   },
   // Agrega más rutas aquí
 ];
@@ -76,7 +80,7 @@ export const Navbar = () => {
             Shadient.co
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box  sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -102,11 +106,12 @@ export const Navbar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "block", md: "none", backdropFilter: "blur(4px)" },
+                background: "rgba(0, 0, 0, 0.5)",
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                <MenuItem sx={{background:"#110F0F"}} key={page.name} onClick={handleCloseNavMenu}>
                   {page.component}
                 </MenuItem>
               ))}

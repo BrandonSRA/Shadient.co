@@ -2,7 +2,7 @@ import { Button, Container, Stack, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-export function CompanySection() {
+export function ServicesSection() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -24,7 +24,7 @@ export function CompanySection() {
           padding={{ xs: "5rem", md: "5rem" }}
         >
           <Stack justifyContent="flex-start">
-            <Typography color="#FFA800">About us</Typography>
+            <Typography color="#FFA800">Branding</Typography>
             <Typography
               paddingTop={2}
               paddingBottom={2}
@@ -35,7 +35,7 @@ export function CompanySection() {
                 lineHeight: "1",
               }}
             >
-              Shadient.co
+              Find your niche
             </Typography>
             <Typography color="#5e5e5e" fontSize="10px">
               Risus commodo id odio turpis pharetra elementum. Pulvinar porta
@@ -52,7 +52,7 @@ export function CompanySection() {
                 variant="contained"
                 sx={{
                   color: "#000",
-                  width: "30%",
+                  width: { xs: "60%", md: "40%" },
                   backgroundColor: "#FFA800",
                   borderRadius: "100px",
                   p: "0px 24px",
@@ -61,7 +61,7 @@ export function CompanySection() {
                   },
                 }}
               >
-                Contact
+                Build my brand
               </Button>
             </Stack>
           </Stack>
