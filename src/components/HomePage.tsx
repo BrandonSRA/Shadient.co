@@ -17,7 +17,8 @@ export function HomePage() {
     <>
       <Container
         sx={{
-          p: 10,
+          pt: { md: "10rem", xl: "30rem", xs: "0" },
+          p: { xs: 10 },
           position: "fixed",
           overflow: "hidden",
           background: "url(/img/Home.png)",
@@ -48,7 +49,7 @@ export function HomePage() {
               sx={{
                 color: "#ffff",
                 fontWeight: "700",
-                fontSize: "50px",
+                fontSize: { xs: "45px", md: "50px" },
                 lineHeight: "1",
               }}
             >
@@ -68,7 +69,7 @@ export function HomePage() {
                 Shadient.co
               </Typography>{" "}
             </DialogTitle>
-            <Typography color="#5e5e5e" fontSize="10px" textAlign="center">
+            <Typography color={{xs: "#fff", md:"#5e5e5e" }} fontSize="10px" textAlign="center">
               This is a page made with react.js and material ui, the
               <br /> template is in the figma shadient.co
             </Typography>

@@ -18,8 +18,8 @@ export const GenerateTheme = createTheme({
       xs: 0,
       sm: 600,
       md: 900,
-      lg: 1200,
-      xl: 1700,
+      lg: 1900,
+      xl: 2000,
     },
   },
 
